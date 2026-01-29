@@ -340,13 +340,13 @@ begin
       Result := Tan(X);
     // ARCSIN
     TTokenType.ArcSin:
-      if (X >= 1.0) and (X <= 1.0) then
+      if (X >= -1.0) and (X <= 1.0) then
         Result := ArcSin(X)
       else
         Error(FunctionPos, sBadFunctionArgument);
     // ARCCOS
     TTokenType.ArcCos:
-      if (X >= 1.0) and (X <= 1.0) then
+      if (X >= -1.0) and (X <= 1.0) then
         Result := ArcCos(X)
       else
         Error(FunctionPos, sBadFunctionArgument);
@@ -1414,3 +1414,4 @@ begin
 end;
 
 end.
+
